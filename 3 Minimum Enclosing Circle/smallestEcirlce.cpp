@@ -9,7 +9,6 @@
 #include<unistd.h>
 #include<sys/stat.h>
 #include<assert.h>
-#include "gif.h"
 #include "gnu.h"
 
 using namespace std;
@@ -509,7 +508,7 @@ circle welzlStart(const vector<point>& P)
 int main(int argc, char *argv[])
 {
     if (mkdir("pics", 0777) == -1) 
-        cerr << "Error :  " << strerror(errno) << endl;  
+        cerr << "Error : could not create directory!" << endl;  
     vector<point> points,finalCircle;
     circle minSpanCirle;
     cout<<"Generating "<<atoi(argv[1])<<" points!"<<endl;

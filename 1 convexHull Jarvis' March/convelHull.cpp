@@ -8,7 +8,7 @@
 #include<iterator>
 #include<unistd.h>
 #include<sys/stat.h>
-#include "gif.h"
+#include<error.h>
 #include "gnu.h"
 
 using namespace std;
@@ -268,7 +268,7 @@ vector<line> maindispLoop(vector<point> points){
 int main(int argc, char *argv[])
 {
     if (mkdir("pics", 0777) == -1) 
-        cerr << "Error :  " << strerror(errno) << endl;  
+        cerr << "Error, couldn't make directory!"<< endl;  
     vector<point> points;
     vector<line> convexHull;
     cout<<"Generating "<<atoi(argv[1])<<" points!"<<endl;

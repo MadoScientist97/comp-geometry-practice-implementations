@@ -12,3 +12,5 @@ rm currentLine.txt
 rm currentpoint.txt
 rm scatter.txt
 rm startpt.txt
+rm -r pics
+rm convexHull.txt
