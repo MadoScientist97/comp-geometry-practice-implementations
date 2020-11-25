@@ -24,7 +24,7 @@ IMPORTANT: Only coded to run on linux right now. Needs gnuplot and imagemagic to
     "man gnuplot"
     "man convert" //convert is one of the tools provided by imagemagick and its the only one that I am using.
      If both man pages work great!! 
-4) There are 4 files for each Algo/folder. The main code for the algo is the one with .cpp extension. 
+4) There are 3 files for each Algo/folder. The main code for the algo is the one with .cpp extension. 
     compile the .cpp file, using : "g++ algoFileName.cpp" No extra parameters.
     Finally run the program using "./a.out "{number of points}" ". 
     Number of points is a commandline arguement. Since this is for computational geometry most of the time the input would be in the form of a set of points. Here I am generating a uniformly random set of points everytime (but the same points will be generated for each input number). This allows us to appreciate the complexity difference between two algos. If both are ran using the same number of points in their arguements then both algo would be working for the same input space.
