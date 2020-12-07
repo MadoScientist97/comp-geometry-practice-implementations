@@ -486,15 +486,15 @@ circle welzlRecurse(vector<point>& Pset,vector<point> Boundary, int n)
   
 circle welzlStart(const vector<point>& P) 
 { 
-    gnucount++;
-    ofstream startpoint;
-    startpoint.open("startpts.txt");
-    startpoint<<P[0].x<<" "<<P[0].y<<endl;
-    startpoint<<P[1].x<<" "<<P[1].y<<endl;
-    startpoint.close();
-    gnuStartpoint(to_string(gnucount));
-    sleep(1);
-    startpoint.close();
+    // gnucount++;
+    // ofstream startpoint;
+    // startpoint.open("startpts.txt");
+    // startpoint<<P[0].x<<" "<<P[0].y<<endl;
+    // startpoint<<P[1].x<<" "<<P[1].y<<endl;
+    // startpoint.close();
+    // gnuStartpoint(to_string(gnucount));
+    // sleep(1);
+    // startpoint.close();
 
     vector<point> P_copy = P; 
     random_shuffle(P_copy.begin(), P_copy.end()); 
