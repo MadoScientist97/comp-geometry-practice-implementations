@@ -8,7 +8,6 @@
 #include<iterator>
 #include<unistd.h>
 #include<sys/stat.h>
-#include<error.h>
 #include "gnu.h"
 
 using namespace std;
@@ -55,7 +54,7 @@ void gnuUpdateNewpoint(string fname, int check){
     p(initline);
     initline = "set output \"pics/" + fname + ".png\"\n";
     p(initline);
-    if (check<1)  
+    if (check<1)
     initline = "plot \"currentLine.txt\" lt 7 lc 1 w lp,\"currentpoint.txt\" lw 5 lt 2 lc 10,\"scatter.txt\" lt 5 lc 9\n";
     else
     initline = "plot \"currentLine.txt\" lt 7 lc 1 w lp, \"currentpoint.txt\" lw 5 lt 2 lc 10, \"convexHull.txt\" lt 2 lc 4 w lp,\"scatter.txt\" lt 5 lc 9\n";
@@ -216,7 +215,7 @@ vector<line> maindispLoop(vector<point> points){
     startpoint.close();
 
     gnuStartpoint(to_string(gnucount));
-    sleep(0.5);
+    sleep(1);
     gnucount++;
 
     vector<line> convexHull;
@@ -253,7 +252,7 @@ vector<line> maindispLoop(vector<point> points){
             if (nextpoint != nextline.retpoint('x')){
                 nextline.updateline(nextpoint);
                 break;
-            }       
+            }
         }
     }
     writeConvexHull(convexHull);
@@ -267,8 +266,8 @@ vector<line> maindispLoop(vector<point> points){
 
 int main(int argc, char *argv[])
 {
-    if (mkdir("pics", 0777) == -1) 
-        cerr << "Error, couldn't make directory!"<< endl;  
+    if (mkdir("pics", 0777) == -1)
+        cerr << "Error, couldn't make directory!"<< endl;
     vector<point> points;
     vector<line> convexHull;
     cout<<"Generating "<<atoi(argv[1])<<" points!"<<endl;
@@ -277,7 +276,7 @@ int main(int argc, char *argv[])
     string fname = "1";
     gnuInit(fname);
     cout<<"Engine started."<<endl;
-    sleep(0.5);
+    sleep(1);
     points = getpoints();
     convexHull = maindispLoop(points);
     system("./gifscript.sh \"./pics/\"");
