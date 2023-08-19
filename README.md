@@ -36,3 +36,13 @@ Reminder to self: This should be the first part of the program that recieve an u
 6) Finally during the program execution quite a few text files and a folder would be created but everything would be deleted and you'll be left with only two files. A png of the final output and a gif that will try to visualize how the algo was working inside.
 
 7)  That's it. Wish me luck on learning things to end up not having to do anything remotely related when I join somewhere. Yay :x.
+
+
+### Final Gif Preview
+
+
+#### Jarvis' March
+![Jarvis' March](./convexHull-Jarvis-March/convexHull.gif)
+
+#### Graham's scan
+![Graham's](./convexHull-graham-scan/convexHull.gif)
